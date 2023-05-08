@@ -84,7 +84,7 @@ public class CargaEnvios extends javax.swing.JFrame {
         MP = new javax.swing.JCheckBox();
         jButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
