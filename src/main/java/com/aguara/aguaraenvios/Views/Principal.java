@@ -101,7 +101,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mario\\Documents\\NetBeansProjects\\AguaraEnvios\\src\\main\\java\\com\\aguara\\aguaraenvios\\Views\\descarga.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nelkha\\Documents\\NetBeansProjects\\AguaraEnvios\\src\\main\\java\\com\\aguara\\aguaraenvios\\Views\\descarga.png")); // NOI18N
         jLabel1.setText("jLabel1");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
