@@ -126,5 +126,5 @@ public abstract class Comprobante {
     }
 
     //Metodos 
-    public abstract double calcularImporte();
+    public abstract double calcularImporte(Comprobante comprobante);
 }
