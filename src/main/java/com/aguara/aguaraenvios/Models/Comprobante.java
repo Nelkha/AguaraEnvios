@@ -15,7 +15,9 @@ public abstract class Comprobante {
     private String observaciones;
     private boolean entregado;
 
-    public Comprobante(long idComprobante, Date fecha, String remitente, String destinatario, String cuitDestinatario, Localidad localidadDestinatario, String domicilioDestinatario, String telefonoDestinatario, double importeAPagar, String observaciones, boolean entregado) {
+    //Constructor
+    public Comprobante(long idComprobante, Date fecha, String remitente, String destinatario, String cuitDestinatario, Localidad localidadDestinatario, String domicilioDestinatario, String telefonoDestinatario, double importeAPagar, String observaciones) {
+        this.entregado = false;
         this.idComprobante = idComprobante;
         this.fecha = fecha;
         this.remitente = remitente;
@@ -26,10 +28,10 @@ public abstract class Comprobante {
         this.telefonoDestinatario = telefonoDestinatario;
         this.importeAPagar = importeAPagar;
         this.observaciones = observaciones;
-        this.entregado = entregado;
+        
     }
 
-    
+   //GETTERS, SETTERS Y TOSTRING 
     public long getIdComprobante() {
         return idComprobante;
     }
@@ -123,5 +125,6 @@ public abstract class Comprobante {
         return "Comprobante{" + "idComprobante=" + idComprobante + ", fecha=" + fecha + ", remitente=" + remitente + ", destinatario=" + destinatario + ", cuitDestinatario=" + cuitDestinatario + ", localidadDestinatario=" + localidadDestinatario + ", domicilioDestinatario=" + domicilioDestinatario + ", telefonoDestinatario=" + telefonoDestinatario + ", importeAPagar=" + importeAPagar + ", observaciones=" + observaciones + ", entregado=" + entregado + '}';
     }
 
-    
+    //Metodos 
+    public abstract double calcularImporte();
 }
