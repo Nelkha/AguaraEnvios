@@ -1,8 +1,15 @@
 package com.aguara.aguaraenvios.Models;
 
+import java.io.Serializable;
 import java.util.Date;
-
-public abstract class Comprobante {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
+public abstract class Comprobante implements Serializable {
+    @Id
+    @GeneratedValue(strategy =GenerationType.SEQUENCE)
     private long idComprobante;
     private Date fecha;
     private String remitente;

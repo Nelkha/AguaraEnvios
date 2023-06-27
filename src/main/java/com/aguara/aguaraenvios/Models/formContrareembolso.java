@@ -5,13 +5,16 @@
 package com.aguara.aguaraenvios.Models;
 
 import java.util.Date;
+import javax.persistence.Entity;
 
 /**
  *
  * @author Nelkha
  */
+@Entity
 public class formContrareembolso extends Comprobante {
 
+    
     private String retiraEn;
     private double efectivo;
     private double cheque;
@@ -26,7 +29,7 @@ public class formContrareembolso extends Comprobante {
         this.cheque = cheque;
         this.nroCheuqe = nroCheuqe;
         this.costoServ = costoServ;
-        
+
     }
 
     public String getRetiraEn() {
@@ -76,14 +79,12 @@ public class formContrareembolso extends Comprobante {
     public void setaPagar(double aPagar) {
         this.aPagar = aPagar;
     }
-    
-    
-    @Override
 
+    @Override
     public double calcularImporte(Comprobante comprobante) {
-        formContrareembolso comp=(formContrareembolso) comprobante;
-        this.aPagar=(comp.getEfectivo()+comp.getCheque())/100;
-        return comp.getaPagar();
+        formContrareembolso comp = (formContrareembolso) comprobante;
+        this.aPagar = (comp.getEfectivo() + comp.getCheque()) / 100;
+        return aPagar;
     }
 
 }
